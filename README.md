@@ -4,7 +4,7 @@
 
 Each planet is replaced by a hyperbolic projection of limited size, matching the style of this MC Escher image:
 
-![MC Escher image](https://github.com/danielmartin0/factorio-Small-Space-Age/blob/main/escher.png?raw=true){width=300 height=300}
+![MC Escher image](https://github.com/danielmartin0/factorio-Small-Space-Age/blob/main/escher.png?raw=true)
 
 Rockets travel directly between planets; this mod depends on [No Space Platforms](https://mods.factorio.com/mod/Space-Age-Without-Platforms).
 
