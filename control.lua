@@ -1,7 +1,10 @@
 local function set_destructibility(spawners)
 	for _, spawner in pairs(spawners) do
 		local distance_from_center = math.sqrt(spawner.position.x ^ 2 + spawner.position.y ^ 2)
-		if distance_from_center > 130 and settings.global["smallspage-indestructible-enemy-bases"].value then
+		if
+			settings.global["smallspage-indestructible-enemy-bases"].value
+			and distance_from_center > settings.global["smallspage-indestructible-enemy-bases-radius"].value
+		then
 			spawner.destructible = false
 		else
 			spawner.destructible = true

@@ -2,6 +2,7 @@
 Version: 1.0.5
 Date: ????
   Changes:
+    - Added setting to control the radius at which enemy bases become indestructible.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.4
 Date: 2025-05-20
