@@ -3,7 +3,7 @@ data:extend({
 		type = "double-setting",
 		name = "smallspage-radius",
 		setting_type = "startup",
-		default_value = 315,
+		default_value = 320,
 		minimum_value = 20,
 		maximum_value = 100000,
 	},
