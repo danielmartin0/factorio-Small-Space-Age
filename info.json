@@ -5,6 +5,7 @@
     "title": "Small Space Age",
     "description": "Each planet is replaced by a hyperbolic projection of limited size. Rockets travel directly between planets.\n\nResources are infinite, but patches are generally small. Enemy bases far from spawn are indestructible.",
     "contact": "Discord: thesixthroc",
+    "homepage": "https://github.com/danielmartin0/factorio-Small-Space-Age",
     "factorio_version": "2.0",
     "space_travel_required": true,
     "dependencies": [
