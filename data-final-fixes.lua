@@ -97,7 +97,7 @@ for _, prototype_type in pairs({ "noise-expression", "noise-function" }) do
 			end
 		end
 
-		log(serpent.block(prototype))
+		-- log(serpent.block(prototype))
 	end
 end
 
