@@ -19,7 +19,13 @@ script.on_event(defines.events.on_chunk_generated, function(event)
 end)
 
 script.on_event(defines.events.on_runtime_mod_setting_changed, function(event)
-	if event.setting_type == "runtime-global" and event.setting == "smallspage-indestructible-enemy-bases" then
+	if
+		event.setting_type == "runtime-global"
+		and (
+			event.setting == "smallspage-indestructible-enemy-bases"
+			or event.setting == "smallspage-indestructible-enemy-bases-radius"
+		)
+	then
 		for _, surface in pairs(game.surfaces) do
 			local spawners = surface.find_entities_filtered({ type = "unit-spawner" })
 			set_destructibility(spawners)
