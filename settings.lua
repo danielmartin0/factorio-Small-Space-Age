@@ -6,6 +6,14 @@ data:extend({
 		default_value = 300,
 		minimum_value = 20,
 		maximum_value = 100000,
+		order = "a",
+	},
+	{
+		type = "bool-setting",
+		name = "smallspage-indestructible-enemy-bases",
+		setting_type = "runtime-global",
+		default_value = false,
+		order = "b",
 	},
 	{
 		type = "double-setting",
@@ -14,11 +22,6 @@ data:extend({
 		default_value = 160,
 		minimum_value = 0,
 		maximum_value = 100000,
-	},
-	{
-		type = "bool-setting",
-		name = "smallspage-indestructible-enemy-bases",
-		setting_type = "runtime-global",
-		default_value = true,
+		order = "c",
 	},
 })
