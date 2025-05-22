@@ -1,7 +1,7 @@
 {
     "name": "Small-Space-Age",
     "author": "thesixthroc",
-    "version": "1.0.10",
+    "version": "1.0.11",
     "title": "Small Space Age",
     "description": "Each planet is replaced by a hyperbolic projection of limited size. Rockets travel directly between planets. Resources are infinite, but patches are generally small.",
     "contact": "Discord: thesixthroc",
