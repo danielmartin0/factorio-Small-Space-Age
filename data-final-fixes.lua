@@ -16,18 +16,22 @@ data:extend({
 
 if settings.startup["smallspage-mode"].value == "spherical" then
 	data:extend({
-		{ type = "noise-expression", name = "smallspage_term_1", expression = "smallspage_r_over_D" },
+		{ type = "noise-expression", name = "smallspage_term_1", expression = "1" },
 
 		{ type = "noise-expression", name = "smallspage_term_2", expression = "smallspage_term_2b / 6" },
-		{ type = "noise-expression", name = "smallspage_term_2b", expression = "smallspage_r_over_D ^ 3" },
+		{ type = "noise-expression", name = "smallspage_term_2b", expression = "smallspage_r_over_D ^ 2" },
 
 		{ type = "noise-expression", name = "smallspage_term_3", expression = "smallspage_term_3b * 3" },
 		{ type = "noise-expression", name = "smallspage_term_3b", expression = "smallspage_term_3c / 40" },
-		{ type = "noise-expression", name = "smallspage_term_3c", expression = "smallspage_r_over_D ^ 5" },
+		{ type = "noise-expression", name = "smallspage_term_3c", expression = "smallspage_r_over_D ^ 4" },
 
 		{ type = "noise-expression", name = "smallspage_term_4", expression = "smallspage_term_4b * 5" },
 		{ type = "noise-expression", name = "smallspage_term_4b", expression = "smallspage_term_4c / 112" },
-		{ type = "noise-expression", name = "smallspage_term_4c", expression = "smallspage_r_over_D ^ 7" },
+		{ type = "noise-expression", name = "smallspage_term_4c", expression = "smallspage_r_over_D ^ 6" },
+
+		{ type = "noise-expression", name = "smallspage_term_5", expression = "smallspage_term_5b * 35" },
+		{ type = "noise-expression", name = "smallspage_term_5b", expression = "smallspage_term_5c / 1152" },
+		{ type = "noise-expression", name = "smallspage_term_5c", expression = "smallspage_r_over_D ^ 8" },
 
 		{
 			type = "noise-expression",
@@ -42,11 +46,18 @@ if settings.startup["smallspage-mode"].value == "spherical" then
 		{
 			type = "noise-expression",
 			name = "smallspage_series_c",
-			expression = "smallspage_term_3 + smallspage_term_4",
+			expression = "smallspage_term_3 + smallspage_series_d",
+		},
+		{
+			type = "noise-expression",
+			name = "smallspage_series_d",
+			expression = "smallspage_term_4 + smallspage_term_5",
 		},
 
-		{ type = "noise-expression", name = "smallspage_spherical_x", expression = "smallspage_series * x" },
-		{ type = "noise-expression", name = "smallspage_spherical_y", expression = "smallspage_series * y" },
+		{ type = "noise-expression", name = "smallspage_series_with_scale", expression = "smallspage_series * 2" },
+
+		{ type = "noise-expression", name = "smallspage_spherical_x", expression = "smallspage_series_with_scale * x" },
+		{ type = "noise-expression", name = "smallspage_spherical_y", expression = "smallspage_series_with_scale * y" },
 
 		{
 			type = "noise-expression",
