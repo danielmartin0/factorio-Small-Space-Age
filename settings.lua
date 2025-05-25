@@ -1,19 +1,27 @@
 data:extend({
 	{
+		type = "string-setting",
+		name = "smallspage-mode",
+		setting_type = "startup",
+		default_value = "hyperbolic",
+		allowed_values = { "hyperbolic", "spherical" },
+		order = "a",
+	},
+	{
 		type = "double-setting",
 		name = "smallspage-radius",
 		setting_type = "startup",
 		default_value = 300,
 		minimum_value = 20,
 		maximum_value = 100000,
-		order = "a",
+		order = "b",
 	},
 	{
 		type = "bool-setting",
 		name = "smallspage-indestructible-enemy-bases",
 		setting_type = "runtime-global",
 		default_value = false,
-		order = "b",
+		order = "c",
 	},
 	{
 		type = "double-setting",
@@ -22,6 +30,6 @@ data:extend({
 		default_value = 160,
 		minimum_value = 0,
 		maximum_value = 100000,
-		order = "c",
+		order = "d",
 	},
 })

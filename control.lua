@@ -13,9 +13,11 @@ local function set_destructibility(spawners)
 end
 
 script.on_event(defines.events.on_chunk_generated, function(event)
-	local spawners = event.surface.find_entities_filtered({ area = event.area, type = "unit-spawner" })
+	if settings.global["smallspage-indestructible-enemy-bases"].value then -- If false, don't mess with map gen at all
+		local spawners = event.surface.find_entities_filtered({ area = event.area, type = "unit-spawner" })
 
-	set_destructibility(spawners)
+		set_destructibility(spawners)
+	end
 end)
 
 script.on_event(defines.events.on_runtime_mod_setting_changed, function(event)
