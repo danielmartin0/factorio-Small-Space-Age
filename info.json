@@ -3,7 +3,7 @@
     "author": "thesixthroc",
     "version": "2.0.2",
     "title": "Small Space Age",
-    "description": "Each planet is replaced by a hyperbolic projection of limited size.",
+    "description": "Each planet is replaced by a hyperbolic projection of limited size. Requires the Infinite Resources dependency to be playable.",
     "contact": "Discord: thesixthroc",
     "homepage": "https://github.com/danielmartin0/factorio-Small-Space-Age",
     "factorio_version": "2.0",
