@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.0
-Date: ????
+Date: 2025-05-25
   Changes:
     - Fixed a math error in Spherical mode.
     - Spherical mode is now 'zoomed out' by a factor of 2x.
