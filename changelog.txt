@@ -1,12 +1,9 @@
 ---------------------------------------------------------------------------------------------------
-Version: 2.0.1
-Date: ????
-  Changes:
----------------------------------------------------------------------------------------------------
-Version: 2.0.0
+Version: 2.0.0-2.0.1
 Date: 2025-05-25
   Changes:
     - No Space Platforms is now an optional dependency.
+    - Infinite resources have been moved to an optional dependency.
     - Replacing the hyperbolic projection with a spherical projection is now supported in the mod settings.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.10

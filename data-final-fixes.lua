@@ -1,17 +1,6 @@
 local lib = require("lib")
 local merge = lib.merge
 
-for _, resource in pairs(data.raw.resource) do
-	resource.infinite = true
-	resource.infinite_depletion_amount = 0
-	if not (resource.minimum and resource.minimum > 0) then
-		resource.minimum = 200
-	end
-	if not (resource.normal and resource.normal < 1000) then
-		resource.normal = 1000
-	end
-end
-
 data:extend({
 	{ type = "noise-expression", name = "smallspage_D", expression = "300" },
 
