@@ -2,7 +2,7 @@ local lib = require("lib")
 local merge = lib.merge
 
 data:extend({
-	{ type = "noise-expression", name = "smallspage_D", expression = "300" },
+	{ type = "noise-expression", name = "smallspage_D", expression = settings.startup["smallspage-radius"].value },
 
 	{ type = "noise-expression", name = "smallspage_y", expression = "y" },
 	{ type = "noise-expression", name = "smallspage_x", expression = "x" },
