@@ -166,5 +166,7 @@ data:extend({
 })
 
 for _, planet in pairs(data.raw.planet) do
-	planet.map_gen_settings.autoplace_settings.tile.settings["smallspage-out-of-map"] = {}
+	if planet.map_gen_settings then
+		planet.map_gen_settings.autoplace_settings.tile.settings["smallspage-out-of-map"] = {}
+	end
 end
