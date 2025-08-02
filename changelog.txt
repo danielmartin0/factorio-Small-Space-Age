@@ -6,7 +6,7 @@ Date: ????
 Version: 2.2.0
 Date: 2025-08-02
   Changes:
-    - Changed the radius of curvature from 1.2 to 1.25. This means that for any given region in-game, more of the original map sits in that region. This has the effect of making it feel like more of the map is accessible, at the expense of reducing the starting area.
+    - Changed the radius of curvature of the Hyperbolic projection from 1.2 to 1.25. This means that for any given region in-game, more of the original map sits in that region. This has the effect of making it feel like more of the map is accessible, at the expense of reducing the starting area.
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.2
 Date: 2025-06-16
