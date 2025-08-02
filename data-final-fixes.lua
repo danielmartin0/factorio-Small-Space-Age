@@ -82,7 +82,8 @@ else
 
 		{ type = "noise-expression", name = "smallspage_factor", expression = "log2(smallspage_frac)" },
 
-		{ type = "noise-expression", name = "smallspage_R", expression = "1.2" }, -- curvature radius
+		{ type = "noise-expression", name = "smallspage_R", expression = "1.25" }, -- curvature radius
+
 		{ type = "noise-expression", name = "smallspage_ln2", expression = "0.69314718" }, -- ln 2
 		{ type = "noise-expression", name = "smallspage_R_ln2", expression = "smallspage_R * smallspage_ln2" },
 
