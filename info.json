@@ -1,7 +1,7 @@
 {
     "name": "Small-Space-Age",
     "author": "thesixthroc",
-    "version": "2.2.2",
+    "version": "2.2.3",
     "title": "Small Space Age",
     "description": "Each planet is replaced by a hyperbolic projection of limited size.\n\nRequires the Infinite Resources dependency to be playable. It is also strongly recommended to put 'Fulgora Islands' map sliders to the max.",
     "contact": "Discord: thesixthroc",
