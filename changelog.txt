@@ -1,9 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 2.2.2
-Date: ????
-  Changes:
----------------------------------------------------------------------------------------------------
-Version: 2.2.1
+Version: 2.2.1-2.2.2
 Date: 2025-09-01
   Changes:
     - A recommendation to increase the size of Fulgora Islands is now included in the descripton, as Fulgora is otherwise likely unplayable.

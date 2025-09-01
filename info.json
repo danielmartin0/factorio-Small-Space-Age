@@ -3,7 +3,7 @@
     "author": "thesixthroc",
     "version": "2.2.2",
     "title": "Small Space Age",
-    "description": "Each planet is replaced by a hyperbolic projection of limited size.\n\nRequires the Infinite Resources dependency to be playable. It is also strongly recommended to put the 'Fulgora Islands' slider to the max.",
+    "description": "Each planet is replaced by a hyperbolic projection of limited size.\n\nRequires the Infinite Resources dependency to be playable. It is also strongly recommended to put 'Fulgora Islands' map sliders to the max.",
     "contact": "Discord: thesixthroc",
     "homepage": "https://github.com/danielmartin0/factorio-Small-Space-Age",
     "factorio_version": "2.0",
