@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.0
-Date: ????
+Date: 2025-10-08
   Info:
     - Most of the code in this update was written by Pig Style.
   Features:
