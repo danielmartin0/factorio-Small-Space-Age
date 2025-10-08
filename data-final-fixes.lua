@@ -82,7 +82,11 @@ else
 
 		{ type = "noise-expression", name = "smallspage_factor", expression = "log2(smallspage_frac)" },
 
-		{ type = "noise-expression", name = "smallspage_R", expression = "1.25" }, -- curvature radius
+		{
+			type = "noise-expression",
+			name = "smallspage_R",
+			expression = data.raw["mod-data"]["Small-Space-Age"].data.hyperbolic_radius_settings.default,
+		},
 
 		{ type = "noise-expression", name = "smallspage_ln2", expression = "0.69314718" }, -- ln 2
 		{ type = "noise-expression", name = "smallspage_R_ln2", expression = "smallspage_R * smallspage_ln2" },
@@ -169,5 +173,41 @@ data:extend({
 for _, planet in pairs(data.raw.planet) do
 	if planet.map_gen_settings then
 		planet.map_gen_settings.autoplace_settings.tile.settings["smallspage-out-of-map"] = {}
+
+		-- Override the global radius expression for this planet
+		if not planet.map_gen_settings.property_expression_names then
+			planet.map_gen_settings.property_expression_names = {}
+		end
+
+		-- Override radius for this specific planet if a custom setting exists
+		local planet_radius = data.raw["mod-data"]["Small-Space-Age"].data.radius_settings.overrides[planet.name]
+		if planet_radius then
+			-- Override the smallspage_D expression for this specific planet
+			planet.map_gen_settings.property_expression_names["smallspage_D"] = planet_radius
+
+			-- Create planet-specific out-of-map tile
+			data:extend({
+				{
+					type = "tile",
+					name = "smallspage-out-of-map-" .. planet.name,
+					collision_mask = data.raw.tile["out-of-map"].collision_mask,
+					layer = data.raw.tile["out-of-map"].layer,
+					variants = data.raw.tile["out-of-map"].variants,
+					map_color = data.raw.tile["out-of-map"].map_color,
+					autoplace = { probability_expression = "if((x^2 + y^2)>" .. planet_radius .. "^2,inf,-inf)" },
+				},
+			})
+
+			-- Set the planet to use the custom out-of-map tile
+			planet.map_gen_settings.autoplace_settings.tile.settings["smallspage-out-of-map-" .. planet.name] = {}
+			planet.map_gen_settings.autoplace_settings.tile.settings["smallspage-out-of-map"] = nil
+		end
+
+		local hyperbolic_radius =
+			data.raw["mod-data"]["Small-Space-Age"].data.hyperbolic_radius_settings.overrides[planet.name]
+
+		if hyperbolic_radius then
+			planet.map_gen_settings.property_expression_names["smallspage_R"] = hyperbolic_radius
+		end
 	end
 end

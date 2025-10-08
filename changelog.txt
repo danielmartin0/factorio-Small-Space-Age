@@ -1,7 +1,13 @@
 ---------------------------------------------------------------------------------------------------
-Version: 2.2.3
+Version: 3.0.0
 Date: ????
+  Info:
+    - Most of the code in this update was written by Pig Style.
+  Features:
+    - The size of the vanilla planets is now individually customizable. The new defaults provide tight but manageable gameplay.
   Changes:
+    - Demolishers out-of-bounds on Vulcanus are now automatically destroyed.
+    - The hyperbolic projections used for the vanilla planets has been adjusted to improve their gameplay.
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.1-2.2.2
 Date: 2025-09-01
